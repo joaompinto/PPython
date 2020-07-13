@@ -39,6 +39,7 @@ function Invoke-Python-Import-Patch
 {
     $file = ".\dist\Python-$pythonVersion\python38._pth"
     (Get-Content $file) -replace "#import site", 'import site' | Set-Content $file
+    Copy-Item ".\windows\sitecustomize.py" -Destination .\dist\Python-$pythonVersion
 }
 
 Get-Python
