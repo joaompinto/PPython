@@ -1,6 +1,11 @@
-# Portable Standard Python (for Windows)
+# Portable Python Runtime (for Windows)
 
-PSPython is a minimal Python distribution (for Windows) rebuilt from the Python embeddable zip file distributed by the [Python Software Foundation](https://www.python.org/downloads/windows/).
+PPython is a minimal Python distribution (for Windows) based on the Python embeddable zip file distributed by the [Python Software Foundation](https://www.python.org/downloads/windows/).
+
+# More than embeddable ?
+
+PPython extends python embeddable with:
+- The "pip" package manager
 
 # How to Build
 ```ps
@@ -13,5 +18,3 @@ The following is a list of other known portable distributions that can be used o
 - [Anaconda Individual Edition](https://www.anaconda.com/products/individual#windows)
 - [PythonXY](http://python-xy.github.io/)
 - [WinPython](http://winpython.github.io/)
-
-

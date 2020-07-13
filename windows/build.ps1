@@ -1,6 +1,17 @@
 $ErrorActionPreference = "stop"
 
-$global:pythonVersion = $args[0]
+
+$versionArray =  $args[0].Split("+")
+if($versionArray.Count -gt 1) {
+    $build = $versionArray[1]
+    }
+else {
+    $build = "build0"
+}
+
+$global:fullVersion = $args[0]
+$global:pythonVersion = $versionArray[0]
+$global:build = $build
 
 function Get-Python
 {
@@ -34,7 +45,7 @@ Get-Python
 Get-Pip
 Invoke-Python-Import-Patch
 New-Item -Name ".\out" -ItemType "directory" -Force
-Compress-Archive -Path dist\Python-$pythonVersion\* -DestinationPath out\PSPython-$pythonVersion-windows-amd64.zip -Force
+Compress-Archive -Path dist\Python-$pythonVersion\* -DestinationPath out\PPython-$pythonVersion-windows-amd64.zip -Force
 
 
 
