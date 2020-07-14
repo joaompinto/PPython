@@ -1,4 +1,5 @@
 dist/
 download/
 out/
+*.pyc
 
